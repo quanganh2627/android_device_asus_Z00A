@@ -18,6 +18,11 @@ DEVICE_PACKAGE_OVERLAYS += device/asus/Z00A/overlay
 PRODUCT_RUNTIMES := runtime_libart_default
 BLOCK_BASED_OTA := false
 EXPERIMENTAL_USE_JAVA8 := false
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+	ro.debuggable=1 \
+	persist.sys.usb.config=adb,mass_storage,mtp,pclink
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := cm_Z00A
